@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     To do List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Notas</ion-label>
+    </ion-list-header>
+    <div *ngFor="let note of notes; index as i">
+        <ion-item (click)="showNote()">
+          <ion-label>{{note.title}}</ion-label>
+          <ion-chip color="success">
+            <ion-label>{{note.date}}</ion-label>
+          </ion-chip>
+        </ion-item>
+        <ion-item-options>
+        </ion-item-options>
+      
+
+    </div>
+  </ion-list>
+
+</ion-content>
